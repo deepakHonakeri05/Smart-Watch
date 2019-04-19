@@ -680,7 +680,7 @@ void drawStartUp() {
   
   display.setTextSize(1);
   display.setCursor(48,22);
-  display.println("Deepak");
+  display.println("Welcome!");
   display.display();
   delay(2000);
   startClockMode();
@@ -723,7 +723,7 @@ void drawMessage() {
   if(msgBuffer[msgCurDisp][2] > -1 && msgBuffer[msgCurDisp][2] < ICON_ARRAY_SIZE)
     icon_num = (int)(msgBuffer[msgCurDisp][2]);
   
-  drawIcon(centerX - 8, centerY - 20, icon_num);
+  drawIcon(8, 0, icon_num);
   
   display.setTextColor(WHITE);
   display.setTextSize(1);
@@ -733,7 +733,7 @@ void drawMessage() {
     char curChar = msgBuffer[msgCurDisp][i];
     if(curChar == 0x00) break;
     if(curChar >= 0xf0) continue;
-    display.write(curChar);
+    display.write(curChar);   // change : display.write(curChar);
   }
 
   display.display();
@@ -766,7 +766,7 @@ void drawClock() {
     if(iMinutes < 10)
       display.print("0");
     display.println(iMinutes);
-    display.drawBitmap(110,0,ICON_BITMAP_5,16,16,WHITE);  //Battery Logo
+    display.drawBitmap(110,20,ICON_BITMAP_5,16,16,WHITE);  //Battery Logo
     display.display();
 //    display.drawBitmap(105,16,ICON_BITMAP_3,16,16,WHITE);  //Apple Logo
 //    display.display();
@@ -807,7 +807,7 @@ void drawClock() {
     showTimePin(centerX, centerY, 0.1, 0.5, iHour*5 + (int)(iMinutes*5/60));
     showTimePin(centerX, centerY, 0.1, 0.78, iMinutes);
     //showTimePin(centerX, centerY, 0.1, 0.9, iSecond);
-    display.drawBitmap(110,0,ICON_BITMAP_5,16,16,WHITE);  //Battery Logo
+    display.drawBitmap(110,18,ICON_BITMAP_5,16,16,WHITE);  //Battery Logo
     display.display();
     
     iSecond++;
