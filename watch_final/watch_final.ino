@@ -108,7 +108,7 @@ byte clockStyle = CLOCK_STYLE_SIMPLE_MIX;
 boolean updateIndicator = true;
 
 byte centerX = 64;
-byte centerY = 32;
+byte centerY = 16;
 byte iRadius = 28;
 
 #define IDLE_DISP_INTERVAL 60000
@@ -675,12 +675,12 @@ void drawStartUp() {
   display.setTextColor(WHITE);
 //  display.setCursor(28,10);   //Display 'Hola' in center
 
-  display.setCursor(38,4);
+  display.setCursor(38,2);
   display.println("Hola!");
   
   display.setTextSize(1);
-  display.setCursor(48,22);
-  display.println("Welcome!");
+  display.setCursor(43,20);
+  display.println("World!");
   display.display();
   delay(2000);
   startClockMode();
@@ -701,7 +701,7 @@ void drawEmergency() {
   
   display.setTextColor(WHITE);
   display.setTextSize(1);
-  display.setCursor(getCenterAlignedXOfEmg(emgCurDisp), centerY + 10);
+  display.setCursor(getCenterAlignedXOfEmg(emgCurDisp), 20);
   for(int i=3; i<EMG_BUFFER_MAX; i++) {
     char curChar = emgBuffer[emgCurDisp][i];
     if(curChar == 0x00) break;
@@ -723,11 +723,11 @@ void drawMessage() {
   if(msgBuffer[msgCurDisp][2] > -1 && msgBuffer[msgCurDisp][2] < ICON_ARRAY_SIZE)
     icon_num = (int)(msgBuffer[msgCurDisp][2]);
   
-  drawIcon(8, 0, icon_num);
+  drawIcon(centerX-8, 3, icon_num);
   
   display.setTextColor(WHITE);
   display.setTextSize(1);
-  display.setCursor(getCenterAlignedXOfMsg(msgCurDisp), centerY + 10);
+  display.setCursor(getCenterAlignedXOfMsg(msgCurDisp),  20);
 //  display.print(msgCurDisp);  // For debug
   for(int i=3; i<MSG_BUFFER_MAX; i++) {
     char curChar = msgBuffer[msgCurDisp][i];
@@ -766,7 +766,7 @@ void drawClock() {
     if(iMinutes < 10)
       display.print("0");
     display.println(iMinutes);
-    display.drawBitmap(110,20,ICON_BITMAP_5,16,16,WHITE);  //Battery Logo
+//    display.drawBitmap(110,20,ICON_BITMAP_5,16,16,WHITE);  //Battery Logo
     display.display();
 //    display.drawBitmap(105,16,ICON_BITMAP_3,16,16,WHITE);  //Apple Logo
 //    display.display();
@@ -781,11 +781,11 @@ void drawClock() {
     display.setTextColor(WHITE);
     display.setCursor(30, 23);
     display.println((const char*)pgm_read_word(&(weekString[iWeek])));
-    display.setCursor(115,5);
+    display.setCursor(72,3);
     display.println((const char*)pgm_read_word(&(ampmString[iAmPm])));
     
     display.setTextSize(1);
-    display.setCursor(83,5);
+    display.setCursor(40,3);
     if(iHour < 10)
       display.print("0");
     display.print(iHour);
@@ -797,8 +797,8 @@ void drawClock() {
     display.drawBitmap(93,16,ICON_BITMAP_21,16,16,WHITE);  //Chrome Logo
     display.drawBitmap(76,16,ICON_BITMAP_51,16,16,WHITE);  //settings Logo
     
-    display.drawBitmap(46,-2,ICON_BITMAP_65,16,16,WHITE);  //Network Logo
-    display.drawBitmap(65,0,ICON_BITMAP_5,16,16,WHITE);  //Battery Logo
+    //display.drawBitmap(41,-2,ICON_BITMAP_5,16,16,WHITE);  //Network Logo
+   // display.drawBitmap(65,0,ICON_BITMAP_65,16,16,WHITE);  //Battery Logo
     display.display();
   }
   else {
@@ -806,8 +806,8 @@ void drawClock() {
     display.drawCircle(centerX, centerY, iRadius, WHITE);
     showTimePin(centerX, centerY, 0.1, 0.5, iHour*5 + (int)(iMinutes*5/60));
     showTimePin(centerX, centerY, 0.1, 0.78, iMinutes);
-    //showTimePin(centerX, centerY, 0.1, 0.9, iSecond);
-    display.drawBitmap(110,18,ICON_BITMAP_5,16,16,WHITE);  //Battery Logo
+ //   showTimePin(centerX, centerY, 0.1, 0.9, iSecond);
+//    display.drawBitmap(110,18,ICON_BITMAP_5,16,16,WHITE);  //Battery Logo
     display.display();
     
     iSecond++;
@@ -823,7 +823,7 @@ void drawIdleClock() {
       drawIndicator();
 
     display.setTextSize(1);
-    display.setCursor(centerX - 29, centerY - 4);
+    display.setCursor(centerX -10, centerY -5);
     if(iHour < 10)
       display.print("0");
     display.print(iHour);
@@ -831,6 +831,7 @@ void drawIdleClock() {
     if(iMinutes < 10)
       display.print("0");
     display.println(iMinutes);
+    display.drawBitmap(5,2,ICON_BITMAP_3,16,16,WHITE);  //Apple Logo
 
     display.display();    
 }
