@@ -28,11 +28,13 @@ An Arduino powered `SmartWatch` capable of displaying notifications and informat
 <img src="./sample/homeScreen.jpg" width="300" height="300">
 
 ## WatchFaces
-Analog WatchFace                                                 
-<img src="./sample/watchStyle1.JPG" width="300" height="300">    
+Analog WatchFace            
+
+<img src="./sample/watchStyle1.png" width="300" height="300">    
 
 Digital WatchFace
-<img src="./sample/watchStyle2.JPG" width="300" height="300">
+
+<img src="./sample/watchStyle2.png" width="300" height="300">
 
 ## Notifications on-the-go
 
