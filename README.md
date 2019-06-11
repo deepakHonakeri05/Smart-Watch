@@ -14,11 +14,11 @@ An Arduino powered `SmartWatch` capable of displaying notifications and informat
 
 ## Connect Bluetooth devices
 
-<img src="./sample/bluetoothDevices.png" width="300" height="600">
+<img src="./sample/bluetoothDevices.png" width="350" height="600">
 
 ## Change different watch styles
 
-<img src="./sample/watch_controlTAB.png" width="400" height="300">
+<img src="./sample/watch_controlTAB.png" width="300" height="300">
 
 # Overview of Arduino System
 
@@ -31,18 +31,18 @@ An Arduino powered `SmartWatch` capable of displaying notifications and informat
 
 Analog WatchFace
 
-<img src="./sample/watchStyle1.JPG" width="400" height="400">
+<img src="./sample/watchStyle1.JPG" width="300" height="300">
 
 Digital WatchFace
 
-<img src="./sample/watchStyle2.JPG" width="400" height="400">
+<img src="./sample/watchStyle2.JPG" width="300" height="400">
 
 ## Notifications on-the-go
 
-<img src="./sample/notification.jpg" width="400" height="400">
-<img src="./sample/notification1.png" width="400" height="400">
-<img src="./sample/notification2.png" width="400" height="400">
+<img src="./sample/notification.jpg" width="300" height="300">
+<img src="./sample/notification1.png" width="300" height="300">
+<img src="./sample/notification2.png" width="300" height="300">
 
 ## Screen saver
 
-<img src="./sample/screenSaver.JPG" width="400" height="400">
+<img src="./sample/screenSaver.JPG" width="300" height="300">
