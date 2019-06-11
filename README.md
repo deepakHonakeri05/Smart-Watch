@@ -5,8 +5,8 @@ An Arduino powered `SmartWatch` capable of displaying notifications and informat
 # Overview of Android Application
 
 ## View consisting of all notifications and messages
-<img src="./sample/messageTAB.png" width="300" height="600">
-<img src="./sample/messageTAB1.png" width="300" height="600">
+<img src="./sample/messageTAB.png" width="350" height="600">
+<img src="./sample/messageTAB1.png" width="350" height="600">
 
 ## View consisting of selected messages and fiters (added if necessary)
 
