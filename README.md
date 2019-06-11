@@ -35,7 +35,7 @@ Analog WatchFace
 
 Digital WatchFace
 
-<img src="./sample/watchStyle2.JPG" width="400" height="300">
+<img src="./sample/watchStyle2.JPG" width="300" height="300">
 
 ## Notifications on-the-go
 
