@@ -10,7 +10,7 @@ An Arduino powered `SmartWatch` capable of displaying notifications and informat
 
 ## View consisting of selected messages and fiters (added if necessary)
 
-<img src="./sample/filters.png" width="350" height="790">
+<img src="./sample/filters.png" width="350" height="600">
 
 ## Connect Bluetooth devices
 
