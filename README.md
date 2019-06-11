@@ -5,8 +5,8 @@ An Arduino powered `SmartWatch` capable of displaying notifications and informat
 # Overview of Android Application
 
 ## View consisting of all notifications and messages
-<img src="./sample/messageTAB.png" width="400" height="790">
-<img src="./sample/messageTAB1.png" width="400" height="790">
+<img src="./sample/messageTAB.png" width="400" height="700">
+<img src="./sample/messageTAB1.png" width="400" height="700">
 
 ## View consisting of selected messages and fiters (added if necessary)
 
@@ -14,11 +14,11 @@ An Arduino powered `SmartWatch` capable of displaying notifications and informat
 
 ## Connect Bluetooth devices
 
-<img src="./sample/bluetoothDevices.png" width="400" height="790">
+<img src="./sample/bluetoothDevices.png" width="400" height="700">
 
 ## Change different watch styles
 
-<img src="./sample/watch_controlTAB.png" width="400" height="790">
+<img src="./sample/watch_controlTAB.png" width="400" height="300">
 
 # Overview of Arduino System
 
@@ -45,4 +45,4 @@ Digital WatchFace
 
 ## Screen saver
 
-<img src="./sample/screenSaver.png" width="400" height="400">
+<img src="./sample/screenSaver.JPG" width="400" height="400">
