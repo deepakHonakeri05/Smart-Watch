@@ -44,4 +44,4 @@ Digital WatchFace
 
 ## Screen saver
 
-<img src="./sample/screenSaver.JPG" width="300" height="300">
+<img src="./sample/screenSaver.png" width="300" height="300">
